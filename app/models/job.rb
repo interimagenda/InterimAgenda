@@ -1,3 +1,4 @@
 class Job < ActiveRecord::Base
-  belongs_to :employer
+  validates_presence_of :title, :start_date, :description
+  belongs_to :employer dependent: :destroy
 end

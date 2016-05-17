@@ -1,3 +1,3 @@
-class Employer < ActiveRecord::Base
+class Employer < User
   has_many :jobs
 end
