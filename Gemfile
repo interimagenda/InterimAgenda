@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.4'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -44,6 +44,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'spring'
   gem 'web-console', '~> 2.0'
   gem 'guard-rspec'
   gem 'spring-commands-rspec'

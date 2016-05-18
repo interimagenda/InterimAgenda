@@ -1,4 +1,4 @@
-class Freelancers < ApplicationController
+class FreelancersController < ApplicationController
 
   def index
     @freelancers = Freelancer.all
