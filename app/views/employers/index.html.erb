@@ -1,1 +1,20 @@
-<h2>Employers</h2>
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Employers</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table">
+
+      <% @employers.each do |employer| %>
+        <tr>
+          <td><%= link_to employer.company_name, employer_path(employer.id) %></td>
+          <td<%= employer.location %></td>
+        </tr>
+      <% end %>
+
+    </table>
+  </div>
+</div>

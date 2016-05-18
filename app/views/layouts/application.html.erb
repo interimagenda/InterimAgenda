@@ -8,16 +8,22 @@
 </head>
 <body>
 
+<!-- renders the header template -->
+
 <nav class="container">
-  <%= render "header" %>
+  <%= render "layouts/header" %>
 </nav>
+
+<!-- renders the main content of the page -->
 
 <main class="container">
   <%= yield %>
 </main>
 
+<!-- renders the footer of the page -->
+
 <footer class="container">
-  <%= render "footer" %>
+  <%= render "layouts/footer" %>
 </footer>
 
 </body>
