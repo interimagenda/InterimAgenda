@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :freelancers
   resources :jobs
 
-  root 'employers#index'
+  root 'landing#index'
 
 end
