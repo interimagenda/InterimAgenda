@@ -8,10 +8,6 @@ class EmployersController < ApplicationController
     @employer = Employer.find(params[:id])
   end
 
-  def edit
-    @employer = Employer.find(params[:id])
-  end
-
   def update
     @employer = Employer.find(params[:id])
     if @employer.update_attributes(employer_params)
@@ -21,25 +17,30 @@ class EmployersController < ApplicationController
     end
   end
 
-  def new
-    @employer = Employer.new
+  def edit
+    @employer = Employer.find(params[:id])
   end
 
-  def create
-    @employer = Employer.new(employer_params)
-    if @employer.save
-      redirect_to @employer
-    else
-      render 'new'
-    end
-  end
+    # Employers should be created via User-creation
+  # def new
+  #   @employer = Employer.new
+  # end
+  #
+  #
+  # def create
+  #   @employer = Employer.new(employer_params)
+  #   if @employer.save
+  #     redirect_to @employer
+  #   else
+  #     render 'new'
+  #   end
+  # end
 
   def destroy
     @employer = Employer.find(params[:id])
     @employer.destroy
     redirect_to employers_path
   end
-
 
   private
 

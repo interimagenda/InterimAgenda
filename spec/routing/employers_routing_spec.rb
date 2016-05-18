@@ -9,13 +9,13 @@ RSpec.describe EmployersController, type: :routing do
       expect(:get => "/").to route_to("employers#index")
     end
 
-    it "routes to #create" do
-       expect(:post => "/employers").to route_to("employers#create")
-    end
-
-    it "routes to #new" do
-      expect(:get => "/employers/new").to route_to("employers#new")
-    end
+    # it "routes to #create" do
+    #    expect(:post => "/employers").to route_to("employers#create")
+    # end
+    # 
+    # it "routes to #new" do
+    #   expect(:get => "/employers/new").to route_to("employers#new")
+    # end
 
     it "routes to #edit" do
       expect(:get => "/employers/1/edit").to route_to("employers#edit", id: "1")

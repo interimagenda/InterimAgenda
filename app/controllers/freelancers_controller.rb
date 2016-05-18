@@ -21,18 +21,19 @@ class FreelancersController < ApplicationController
     end
   end
 
-  def new
-    @freelancer = Freelancer.new
-  end
-
-  def create
-    @freelancer = Freelancer.new(freelancer_params)
-    if @freelancer.save
-      redirect_to @freelancer
-    else
-      render 'new'
-    end
-  end
+    # Freelancers should be created via User-creation
+  # def new
+  #   @freelancer = Freelancer.new
+  # end
+  #
+  # def create
+  #   @freelancer = Freelancer.new(freelancer_params)
+  #   if @freelancer.save
+  #     redirect_to @freelancer
+  #   else
+  #     render 'new'
+  #   end
+  # end
 
   def destroy
     @freelancer = Freelancer.find(params[:id])
