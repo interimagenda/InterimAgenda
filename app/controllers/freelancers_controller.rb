@@ -2,6 +2,11 @@ class FreelancersController < ApplicationController
 
   def index
     @freelancers = Freelancer.all
+    if params[:search]
+      @freelancers = Freelancer.search(params[:search]).order("created_at DESC")
+    else
+      @freelancers = Freelancer.all.order('created_at DESC')
+    end
   end
 
   def show

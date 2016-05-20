@@ -2,6 +2,11 @@ class EmployersController < ApplicationController
 
   def index
     @employers = Employer.all
+    if params[:search]
+      @employers = Employer.search(params[:search]).order("created_at DESC")
+    else
+      @employers = Employer.all.order('created_at DESC')
+    end
   end
 
   def show
