@@ -7,7 +7,12 @@
       <li class="inline-list"><%= link_to "employers", employers_path %></li>
       <li class="inline-list"><%= link_to "freelancers", freelancers_path %></li>
       <li class="inline-list"><%= link_to "jobs", jobs_path %></li>
-
+      <% if user_signed_in? %>
+      <li class="inline-list" ><%= link_to "sign out", destroy_user_session_path, method: :delete, class: "waves-effect waves-red btn-flat" %></li>
+      <% else %>
+      <li class="inline-list"><%= link_to "log In", new_user_session_path, class: "waves-effect waves-red btn-flat" %></li>
+      <li class="inline-list"><%= link_to "sign up", new_user_registration_path, class: "waves-effect waves-red btn-flat" %></li>
+      <% end %>
 
     </ul>
 
