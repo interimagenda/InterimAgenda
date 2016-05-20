@@ -8,10 +8,19 @@
   <div class="col-xs-12">
     <table class="table">
 
+      <tr>
+        <th>employer</th>
+        <th>location</th>
+        <th>business</th>
+        <th>field</th>
+      </tr>
+
       <% @employers.each do |employer| %>
         <tr>
           <td><%= link_to employer.company_name, employer_path(employer.id) %></td>
-          <td<%= employer.location %></td>
+          <td><%= employer.location %></td>
+          <td><%= employer.business %></td>
+          <td><%= employer.field %></td>
         </tr>
       <% end %>
 

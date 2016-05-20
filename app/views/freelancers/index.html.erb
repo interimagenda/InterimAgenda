@@ -1,1 +1,43 @@
-<h2>Freelancers</h2>
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Freelancers</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table">
+
+      <tr>
+        <th>name of freelancer</th>
+        <th>business</th>
+        <th>field</th>
+        <th>availability</th>
+      </tr>
+
+    <% @freelancers.each do |freelancer| %>
+      <tr>
+        <td><%= link_to freelancer.first_name, freelancer_path(freelancer.id) %></td>
+        <td><%= freelancer.business %></td>
+        <td><%= freelancer.field %></td>
+        <td><%= freelancer.availability %></td>
+      </tr>
+    <% end %>
+
+  </table>
+  </div>
+</div>
+
+
+<!-- # t.string   "first_name"
+# t.string   "last_name"
+# t.string   "display_name"
+# t.integer  "phone"
+# t.date     "birth_date"
+# t.string   "gender"
+# t.string   "education"
+# t.string   "availability"
+# t.string   "business"
+# t.string   "field"
+# t.text     "description"
+# t.integer  "pay_rate" -->
