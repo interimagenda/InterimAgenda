@@ -27,6 +27,14 @@
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
+  <div class="name_info_form"><%= render partial: 'name_info', locals: {f: f} %></div>
+
+  <div class="freelancer_form"><%= render partial: 'freelancer', locals: {f: f} %></div>
+
+  <div class="employer_form"><%= render partial: 'employer', locals: {f: f} %></div>
+
+  <div class="business_info_form"><%= render partial: 'business_info', locals: {f: f} %></div>
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>

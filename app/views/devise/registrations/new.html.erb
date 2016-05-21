@@ -21,26 +21,24 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <!-- name info -->
+
+  <div class="name_info_form"><%= render partial: 'name_info', locals: {f: f} %></div>
+
   <!-- select the type of user -->
 
   <div class="field">
     <%= f.label :type %><br />
-    <%= f.select :type, options_for_select(%w[Freelancer Employer]) %>
-  </div>
+    <%= f.select :type, options_for_select(%w[Freelancer Employer]), id: 'select_type' %>
+  </div><br />
 
   <!-- render either employer or freelancer partial -->
 
-  <%= render partial: 'name_info', locals: {f: f} %>
-
-  <%= render partial: 'freelancer', locals: {f: f} %>
-
-  <%= render partial: 'employer', locals: {f: f} %>
-
-  <%= render partial: 'business_info', locals: {f: f} %>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+
 <% end %>
 
 <%= render "devise/shared/links" %>
