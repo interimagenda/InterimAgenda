@@ -21,6 +21,23 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <!-- select the type of user -->
+
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.select :type, options_for_select(%w[Freelancer Employer]) %>
+  </div>
+
+  <!-- render either employer or freelancer partial -->
+
+  <%= render partial: 'name_info', locals: {f: f} %>
+
+  <%= render partial: 'freelancer', locals: {f: f} %>
+
+  <%= render partial: 'employer', locals: {f: f} %>
+
+  <%= render partial: 'business_info', locals: {f: f} %>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
