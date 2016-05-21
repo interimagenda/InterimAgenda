@@ -4,4 +4,50 @@
   </div>
 </div>
 
-<%= render 'search' %>
+<% if user_signed_in? && current_user.type === 'Freelancer'%>
+
+<div class="row">
+  <div class="col-xs-12">
+
+    <%= render 'search' %>
+
+  </div>
+</div>
+
+<% end %>
+
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table">
+
+      <!-- table header -->
+
+      <tr>
+        <th>job title</th>
+        <th>date created</th>
+      </tr>
+
+      <!-- loop for creating overview of employers -->
+
+      <% @jobs.each do |job| %>
+        <tr>
+          <td>  <%= link_to job.title, job_path(job.id) %></td>
+          <td><%= job.created_at %></td>
+        </tr>
+      <% end %>
+
+    </table>
+  </div>
+</div>
+
+<% if user_signed_in? && current_user.type === 'Employer'%>
+
+<div class="row">
+  <div class="col-xs-12">
+
+    <%= link_to 'create job', new_job_path %>
+
+  </div>
+</div>
+
+<% end %>

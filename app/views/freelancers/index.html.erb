@@ -6,7 +6,13 @@
 
 <!-- searchform gets rendered here -->
 
-<%= render 'search' %>
+<div class="row">
+  <div class="col-xs-12">
+
+    <%= render 'search' %>
+
+  </div>
+</div>
 
 <div class="row">
   <div class="col-xs-12">
@@ -23,29 +29,15 @@
 
       <!-- loop for creating overview of employers -->
 
-    <% @freelancers.each do |freelancer| %>
-      <tr>
-        <td><%= link_to freelancer.first_name, freelancer_path(freelancer.id) %></td>
-        <td><%= freelancer.business %></td>
-        <td><%= freelancer.field %></td>
-        <td><%= freelancer.availability %></td>
-      </tr>
-    <% end %>
+      <% @freelancers.each do |freelancer| %>
+        <tr>
+          <td><%= link_to freelancer.first_name, freelancer_path(freelancer.id) %></td>
+          <td><%= freelancer.business %></td>
+          <td><%= freelancer.field %></td>
+          <td><%= freelancer.availability %></td>
+        </tr>
+      <% end %>
 
-  </table>
+    </table>
   </div>
 </div>
-
-
-<!-- # t.string   "first_name"
-# t.string   "last_name"
-# t.string   "display_name"
-# t.integer  "phone"
-# t.date     "birth_date"
-# t.string   "gender"
-# t.string   "education"
-# t.string   "availability"
-# t.string   "business"
-# t.string   "field"
-# t.text     "description"
-# t.integer  "pay_rate" -->
