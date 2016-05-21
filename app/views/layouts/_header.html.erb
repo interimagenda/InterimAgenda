@@ -4,14 +4,24 @@
 
     <ul class="no-bullets">
 
+      <% if user_signed_in? && current_user.type === 'Freelancer'%>
+
       <li class="inline-list"><%= link_to "employers", employers_path %></li>
-      <li class="inline-list"><%= link_to "freelancers", freelancers_path %></li>
       <li class="inline-list"><%= link_to "jobs", jobs_path %></li>
+
+      <% end %>
+
+      <% if user_signed_in? && current_user.type === 'Employer'%>
+
+      <li class="inline-list"><%= link_to "freelancers", freelancers_path %></li>
+
+      <% end %>
+
       <% if user_signed_in? %>
       <li class="inline-list" ><%= link_to "sign out", destroy_user_session_path, method: :delete %>
       <li class="inline-list" ><%= link_to "edit profile", edit_user_registration_path %></li>
       <% else %>
-      <li class="inline-list"><%= link_to "log In", new_user_session_path %></li>
+      <li class="inline-list"><%= link_to "log in", new_user_session_path %></li>
       <li class="inline-list"><%= link_to "sign up", new_user_registration_path %></li>
       <% end %>
 

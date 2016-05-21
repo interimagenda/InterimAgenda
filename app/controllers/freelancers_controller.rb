@@ -1,4 +1,5 @@
 class FreelancersController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @freelancers = Freelancer.all
