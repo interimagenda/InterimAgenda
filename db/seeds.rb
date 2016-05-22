@@ -1,15 +1,17 @@
+# employers FAKE
+
 employers = Employer.create! [
 
-  {email: "cheese@cheese.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "cheeseFarm", business: "Banking", field: "Management"},
-  {email: "drugs@trucks.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "drugsBytrucks", business: "Banking", field: "Management"},
-  {email: "info@pizzaflut.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "Pizzaflut", business: "Banking", field: "Management"},
-  {email: "info@carshop.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "Carshop", business: "Banking", field: "Management"},
+  {first_name: "Sjaak", last_name: "de Boer", email: "cheese@cheese.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "cheeseFarm", business: "Banking", field: "Management"},
+  {first_name: "Sjaak", last_name: "de Boer", email: "drugs@trucks.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "drugsBytrucks", business: "Banking", field: "Management"},
+  {first_name: "Sjaak", last_name: "de Boer", email: "info@pizzaflut.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "Pizzaflut", business: "Banking", field: "Management"},
+  {first_name: "Sjaak", last_name: "de Boer", email: "info@carshop.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "Carshop", business: "Banking", field: "Management"},
 
-  {email: "bart@schmitt.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "BartSchmitt", business: "Banking", field: "Management"},
-  {email: "dokter@dokter.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "doktersAtdokter", business: "Banking", field: "Management"},
-  {email: "mister@ed.edu", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "misterEd", business: "Banking", field: "Management"},
-  {email: "kabouter@dorp.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "kabouterDorp", business: "Banking", field: "Management"},
-  {email: "weetikveel@weetikt.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", company_name: "weetikt", business: "Banking", field: "Management"}
+  {first_name: "Sjaak", last_name: "de Boer", email: "bart@schmitt.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "BartSchmitt", business: "Banking", field: "Management"},
+  {first_name: "Sjaak", last_name: "de Boer", email: "dokter@dokter.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "doktersAtdokter", business: "Banking", field: "Management"},
+  {first_name: "Sjaak", last_name: "de Boer", email: "mister@ed.edu", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "misterEd", business: "Banking", field: "Management"},
+  {first_name: "Sjaak", last_name: "de Boer", email: "kabouter@dorp.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", location: "Tiel", company_name: "kabouterDorp", business: "Banking", field: "Management"},
+  {first_name: "Sjaak", last_name: "de Boer", email: "weetikveel@weetikt.nl", password: "$2a$10$5eoHh6M2q4GjGkHClO.NqebWWhS94D8rNj5Ot6CB2qrbn7IrTfkSa", company_name: "weetikt", business: "Banking", field: "Management"}
 
 ]
 
@@ -34,5 +36,4 @@ freelancers = Freelancer.create! [
 
 puts "Amount of Employer-seeds #{Employer.count}."
 puts "Amount of Freelancer-seeds #{Freelancer.count}."
-puts "first employer #{Employer.first}"
-puts "first freelancer #{Freelancer.first}"
+puts "Amount of Businesses seeded #{Business.count}."

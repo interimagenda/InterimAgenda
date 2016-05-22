@@ -1,9 +1,10 @@
 <div class="field">
   <%= f.label :business %><br />
-  <%= f.text_field :business %>
+  <%= f.select :business, options_for_select(%w[Banking Insurance Engineering IT Finance Legal Marketing Sales Communication
+      HR Healthcare Administration Government Construction Industry]) %><br />
 </div>
 
 <div class="field">
   <%= f.label :description %><br />
-  <%= f.text_area :description %>
+  <%= f.text_area :description %><br />
 </div>

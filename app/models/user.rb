@@ -10,10 +10,19 @@ class User < ActiveRecord::Base
   # ON CREATE: on create (and only on create) should there be a user-type.
   validates_presence_of :type, on: :create
 
+  validates_presence_of :gender, on: :update
+
   # ON UPDATE: common attributes for both employers and freelancers
-  validates_presence_of :business, :description, on: :update
+  validates_presence_of :description, on: :update
+
+  validates_presence_of :business, on: :update
 
   def self.types
     %w(Employer Freelancer)
+  end
+
+  def self.business
+    %w(Banking Insurance Engineering IT Finance Legal Marketing Sales Communication
+    HR Healthcare Administration Government Construction Industry)
   end
 end

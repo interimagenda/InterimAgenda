@@ -20,10 +20,4 @@ class EmployersController < ApplicationController
     redirect_to employers_path
   end
 
-  private
-
-  def employer_params
-    params.require( :employer ).permit(:company_name, :head_office, :description)
-  end
-
 end

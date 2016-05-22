@@ -1,30 +1,31 @@
 <div class="field">
   <%= f.label :birth_date %><br />
-  <%= f.text_field :birth_date %><br />
+  <%= f.date_field :birth_date%><br />
   <span>Your age will not be visible</span>
 </div>
 
 <div class="field">
   <%= f.label :gender %><br />
-  <%= f.text_field :gender %>
+  <%= f.select :gender, options_for_select(%w[Male Female Undefined]), id: 'gender' %><br />
 </div>
 
 <div class="field">
   <%= f.label :education %><br />
-  <%= f.text_field :education %>
+  <%= f.select :education, options_for_select(%w[LBO MBO HBO Academic]), id: 'education' %><br />
 </div>
 
 <div class="field">
   <%= f.label :field %><br />
-  <%= f.text_field :field %>
+  <%= f.text_field :field%><br />
 </div>
 
 <div class="field">
   <%= f.label :availability %><br />
-  <%= f.text_field :availability %>
+  <%= f.select :availability, options_for_select(%w[Available Unavailable Soon]), id: 'availability' %><br />
+
 </div>
 
 <div class="field">
   <%= f.label :pay_rate %><br />
-  <%= f.text_field :pay_rate %>
+  <%= f.number_field :pay_rate, min: 20 %><br />
 </div>

@@ -27,20 +27,6 @@ class FreelancersController < ApplicationController
     end
   end
 
-    # Freelancers should be created via User-creation
-  # def new
-  #   @freelancer = Freelancer.new
-  # end
-  #
-  # def create
-  #   @freelancer = Freelancer.new(freelancer_params)
-  #   if @freelancer.save
-  #     redirect_to @freelancer
-  #   else
-  #     render 'new'
-  #   end
-  # end
-
   def destroy
     @freelancer = Freelancer.find(params[:id])
     @freelancer.destroy
@@ -48,9 +34,5 @@ class FreelancersController < ApplicationController
   end
 
   private
-
-  def freelancer_params
-    params.require( :freelancer ).permit(:first_name, :last_name, :birth_date, :gender )
-  end
 
 end
