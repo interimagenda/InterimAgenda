@@ -1,3 +1,17 @@
+/* buttons on landing page */
+
+a.landing-button:link {
+  color: white;
+}
+
+a.landing-button:visited {
+  color: white;
+}
+
+a.landing-button:hover {
+  color: white;
+}
+
 /* all links */
 
 a {
@@ -6,7 +20,6 @@ a {
 
 a:link {
     color: #b71c1c;
-
 }
 
 a:visited {
@@ -17,26 +30,23 @@ a:hover {
     color: #e57373;
 }
 
-/* all nav */
+/* nav */
 
 nav {
   font-weight: 400;
 }
 
 .big-nav {
-  height: 128px;
+  height: 127px;
 }
 
 nav a {
   color: #212121 !important;
 }
 
-/* navbar links */
-
 nav a:hover {
   background-color: #ef5350 !important;
 }
-
 
 /* sticky footer */
 
