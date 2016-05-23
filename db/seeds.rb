@@ -36,4 +36,3 @@ freelancers = Freelancer.create! [
 
 puts "Amount of Employer-seeds #{Employer.count}."
 puts "Amount of Freelancer-seeds #{Freelancer.count}."
-puts "Amount of Businesses seeded #{Business.count}."
