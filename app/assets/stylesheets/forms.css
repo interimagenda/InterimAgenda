@@ -1,0 +1,10 @@
+/* intially hide basic-info form */
+
+.hidden_info_form {
+  display: none;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+}

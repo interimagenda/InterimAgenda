@@ -12,7 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
-//= require_tree .
-//= require bootstrap.min
 //= require form
+//= require_tree .
+//= require materialize-sprockets
+//= require init
+
+$(document).ready(function() {
+    $('select').material_select();
+});

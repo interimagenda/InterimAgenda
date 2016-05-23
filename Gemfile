@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.2.4'
+
+
+gem 'jquery-turbolinks'
+gem 'materialize-sass'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

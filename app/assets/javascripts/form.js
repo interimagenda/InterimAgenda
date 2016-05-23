@@ -1,3 +1,7 @@
+// initially hides the basic information when editing account
+
 $(document).ready(function() {
-  $('.edit_basic_info').hide();
+  $(".toggle-basic-info").click(function(){
+    $(".basic_info_form").toggle("slow")
+  })
 });

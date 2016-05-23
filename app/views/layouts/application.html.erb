@@ -10,14 +10,20 @@
 
 <!-- renders the header template -->
 
-<nav class="container-fluid">
-  <%= render "layouts/header" %>
+<nav class="grey darken-3" role="navigation">
+  <div class="nav-wrapper container">
+    <%= render "layouts/header" %>
+  </div>
 </nav>
 
 <!-- renders the main content of the page -->
 
 <main class="container">
+  <div class="center">
+
   <%= yield %>
+
+  </div>
 </main>
 
 <!-- renders the footer of the page -->

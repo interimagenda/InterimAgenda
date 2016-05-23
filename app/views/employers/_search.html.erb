@@ -1,10 +1,4 @@
-<div class="row">
-  <div class="col-xs-12">
-
 <%= form_tag '/employers', :method => "get", id: "search-form" do %>
-<%= search_field_tag :search, params[:search], placeholder: "insert a search query here" %>
-<%= submit_tag "search", :name => nil, id: "search-form", class: "btn-large waves-effect waves-light white-text red lighten-1 center" %>
+<%= search_field_tag :search, params[:search], placeholder: "insert a search query here", autofocus: true %>
+<%= submit_tag "search", :name => nil, id: "search-form", class: "btn-large grey darken-2 waves-effect waves-light" %>
 <% end %>
-
-  </div>
-</div>

@@ -1,43 +1,63 @@
-<div class="row">
+<ul class="center hide-on-med-and-down">
 
-  <div class="col-xs-12">
+  <li><a href="#"><i class="material-icons">perm_contact_calendar</i></a></li>
 
-    <ul class="no-bullets">
+  <li><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">perm_contact_calendar</i></a></li>
 
-      <% if user_signed_in? && current_user.type === 'Freelancer'%>
+  <% if user_signed_in? && current_user.type === 'Freelancer'%>
 
-      <li class="inline-list"><%= link_to "employers", employers_path %></li>
+  <li><%= link_to "employers", employers_path, class: "waves-effect" %></li>
+
+  <% end %>
+
+  <% if user_signed_in? && current_user.type === 'Employer'%>
+
+  <li><%= link_to "freelancers", freelancers_path, class: "waves-effect" %></li>
+
+  <% end %>
+
+  <% if user_signed_in? %>
+
+  <li><%= link_to "jobs", jobs_path, class: "waves-effect" %></li>
+  <li><%= link_to "sign out", destroy_user_session_path, method: :delete, class: "waves-effect" %>
+  <li><%= link_to "edit profile", edit_user_registration_path, class: "waves-effect" %></li>
+
+  <% else %>
+
+  <li><%= link_to "log in", new_user_session_path, class: "waves-effect" %></li>
+  <li><%= link_to "sign up", new_user_registration_path, class: "waves-effect" %></li>
+  <% end %>
+
+</ul>
+
+<ul id="nav-mobile" class="side-nav">
+
+  <% if user_signed_in? && current_user.type === 'Freelancer'%>
+
+  <li><%= link_to "employers", employers_path, class: "waves-effect" %></li>
+
+  <% end %>
+
+  <% if user_signed_in? && current_user.type === 'Employer'%>
+
+  <li><%= link_to "freelancers", freelancers_path, class: "waves-effect" %></li>
+
+  <% end %>
+
+  <% if user_signed_in? %>
+
+  <li><%= link_to "jobs", jobs_path, class: "waves-effect btn-flat" %></li>
+  <li><%= link_to "sign out", destroy_user_session_path, method: :delete, class: "waves-effect" %>
+  <li><%= link_to "edit profile", edit_user_registration_path, class: "waves-effect" %></li>
+
+  <% else %>
+
+  <li><%= link_to "log in", new_user_session_path, class: "waves-effect" %></li>
+  <li><%= link_to "sign up", new_user_registration_path, class: "waves-effect" %></li>
+  <% end %>
+
+</ul>
 
 
-      <% end %>
 
-      <% if user_signed_in? && current_user.type === 'Employer'%>
-
-      <li class="inline-list"><%= link_to "freelancers", freelancers_path %></li>
-
-      <% end %>
-
-      <% if user_signed_in? %>
-      <li class="inline-list"><%= link_to "jobs", jobs_path %></li>
-      <li class="inline-list" ><%= link_to "sign out", destroy_user_session_path, method: :delete %>
-      <li class="inline-list" ><%= link_to "edit profile", edit_user_registration_path %></li>
-      <% else %>
-      <li class="inline-list"><%= link_to "log in", new_user_session_path %></li>
-      <li class="inline-list"><%= link_to "sign up", new_user_registration_path %></li>
-      <% end %>
-
-    </ul>
-
-  </div>
-
-</div>
-
-<div class="row">
-
-  <div class="col-xs-12">
-
-    <h1>InterimAgenda</h1>
-
-  </div>
-
-</div>
+<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
