@@ -1,26 +1,44 @@
-<ul class="center hide-on-med-and-down">
-
-  <li><a href="#"><i class="material-icons">perm_contact_calendar</i></a></li>
-
-  <li><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">perm_contact_calendar</i></a></li>
-
+<ul class="left hide-on-med-and-down">
   <% if user_signed_in? && current_user.type === 'Freelancer'%>
 
-  <li><%= link_to "employers", employers_path, class: "waves-effect" %></li>
+  <li><%= link_to employers_path, class: "waves-effect" do %>
+    <i class="material-icons">group</i>employers
+    <% end %>
+  </li>
+
+  <li><%= link_to jobs_path, class: "waves-effect" do %>
+    <i class="material-icons">work</i>jobs
+    <% end %>
+  </li>
 
   <% end %>
 
   <% if user_signed_in? && current_user.type === 'Employer'%>
 
-  <li><%= link_to "freelancers", freelancers_path, class: "waves-effect" %></li>
+  <li><%= link_to freelancers_path, class: "waves-effect" do %>
+    <i class="material-icons">group</i>freelancers
+    <% end %>
+  </li>
 
   <% end %>
 
+</ul>
+
+<!-- if user is signed in -->
+
+<ul class="right hide-on-med-and-down">
+
   <% if user_signed_in? %>
 
-  <li><%= link_to "jobs", jobs_path, class: "waves-effect" %></li>
-  <li><%= link_to "sign out", destroy_user_session_path, method: :delete, class: "waves-effect" %>
-  <li><%= link_to "edit profile", edit_user_registration_path, class: "waves-effect" %></li>
+  <li><%= link_to destroy_user_session_path, method: :delete, class: "waves-effect" do %>
+    <i class="material-icons">perm_contact_calendar</i>sign out
+    <% end %>
+  </li>
+
+  <li><%= link_to edit_user_registration_path, class: "waves-effect" do %>
+    <i class="material-icons">account_circle</i>profile
+    <% end %>
+  </li>
 
   <% else %>
 
@@ -29,12 +47,15 @@
   <% end %>
 
 </ul>
+
+<!-- if user is signed in and is a type of user -->
 
 <ul id="nav-mobile" class="side-nav">
 
   <% if user_signed_in? && current_user.type === 'Freelancer'%>
 
   <li><%= link_to "employers", employers_path, class: "waves-effect" %></li>
+  <li><%= link_to "jobs", jobs_path, class: "waves-effect" %></li>
 
   <% end %>
 
@@ -46,9 +67,8 @@
 
   <% if user_signed_in? %>
 
-  <li><%= link_to "jobs", jobs_path, class: "waves-effect btn-flat" %></li>
-  <li><%= link_to "sign out", destroy_user_session_path, method: :delete, class: "waves-effect" %>
-  <li><%= link_to "edit profile", edit_user_registration_path, class: "waves-effect" %></li>
+  <li><%= link_to "signout", destroy_user_session_path, method: :delete, class: "waves-effect" %>
+  <li><%= link_to "profile", edit_user_registration_path, class: "waves-effect" %></li>
 
   <% else %>
 
@@ -57,7 +77,5 @@
   <% end %>
 
 </ul>
-
-
 
 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>

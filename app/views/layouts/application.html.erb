@@ -6,11 +6,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="grey lighten-2">
 
-<!-- renders the header template -->
+<!-- renders the navigation -->
 
-<nav class="grey darken-3" role="navigation">
+<nav class="white big-nav" role="navigation">
   <div class="nav-wrapper container">
     <%= render "layouts/header" %>
   </div>
@@ -20,16 +20,14 @@
 
 <main class="container">
   <div class="center">
-
   <%= yield %>
-
   </div>
 </main>
 
 <!-- renders the footer of the page -->
 
-<footer class="container">
-  <%= render "layouts/footer" %>
+<footer class="page-footer white footer-border">
+      <%= render "layouts/footer" %>
 </footer>
 
 </body>
