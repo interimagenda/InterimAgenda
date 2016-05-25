@@ -15,9 +15,9 @@
 
       <!-- select the type of user -->
 
-      <div class="field">
-        <%= f.label :type %><br />
-        <%= f.select :type, options_for_select(%w[Freelancer Employer]), id: 'select_type' %>
+      <div class="field browser-default">
+        <%= f.label :type, class: "browser-default" %><br />
+        <%= f.select :type, options_for_select(%w[Freelancer Employer]), id: 'select_type', class: "browser-default" %>
       </div><br />
 
       <!-- render either employer or freelancer partial -->

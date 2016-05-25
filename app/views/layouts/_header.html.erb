@@ -60,26 +60,26 @@
 
   <% if user_signed_in? && current_user.type === 'Freelancer'%>
 
-  <li><%= link_to "employers", employers_path, class: "big-link grey darken-4 waves-effect" %></li>
-  <li><%= link_to "jobs", jobs_path, class: "big-link grey darken-4 waves-effect" %></li>
+  <li><%= link_to "employers", employers_path, class: "big-link waves-effect" %></li>
+  <li><%= link_to "jobs", jobs_path, class: "big-link waves-effect" %></li>
 
   <% end %>
 
   <% if user_signed_in? && current_user.type === 'Employer'%>
 
-  <li><%= link_to "freelancers", freelancers_path, class: "big-link grey darken-4 waves-effect" %></li>
+  <li><%= link_to "freelancers", freelancers_path, class: "big-link waves-effect" %></li>
 
   <% end %>
 
   <% if user_signed_in? %>
 
-  <li><%= link_to "signout", destroy_user_session_path, method: :delete, class: "big-link grey darken-4 waves-effect" %>
-  <li><%= link_to "profile", edit_user_registration_path, class: "big-link grey darken-4 waves-effect" %></li>
+  <li><%= link_to "signout", destroy_user_session_path, method: :delete, class: "big-link waves-effect" %>
+  <li><%= link_to "profile", edit_user_registration_path, class: "big-link waves-effect" %></li>
 
   <% else %>
 
-  <li><%= link_to "log in", new_user_session_path, class: "big-link grey darken-4 waves-effect" %></li>
-  <li><%= link_to "sign up", new_user_registration_path, class: "big-link grey darken-4 waves-effect" %></li>
+  <li><%= link_to "log in", new_user_session_path, class: "big-link waves-effect" %></li>
+  <li><%= link_to "sign up", new_user_registration_path, class: "big-link waves-effect" %></li>
   <% end %>
 
 </ul>
