@@ -1,9 +1,15 @@
 source 'https://rubygems.org'
 ruby '2.2.4'
 
-
+gem 'chosen-rails'
+gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-turbolinks'
-gem 'materialize-sass'
+gem 'material_icons'
+gem 'gravatar_image_tag'
+gem "mailboxer"
+gem 'bootstrap-sass'
+gem 'bootstrap-will_paginate'
+gem 'will_paginate'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

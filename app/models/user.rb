@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  acts_as_messageable
+
   # ALWAYS: there should always be a first and last name.
   validates_presence_of :first_name, :last_name
 
@@ -16,6 +18,10 @@ class User < ActiveRecord::Base
   validates_presence_of :description, on: :update
 
   validates_presence_of :business, on: :update
+
+  def mailboxer_email(object)
+    email
+  end
 
   def self.types
     %w(Employer Freelancer)

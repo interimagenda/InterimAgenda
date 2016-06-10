@@ -9,15 +9,16 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+//= bootstrap-sprockets
+//= bootstrap
 //= require jquery
-//= require jquery_ujs
 //= require jquery.turbolinks
+//= require chosen-jquery
+//= require bootstrap-sprockets
+//= require jquery_ujs
 //= require turbolinks
-//= require form
+//= require messages
 //= require_tree .
-//= require materialize-sprockets
-//= require init
 
 // $(document).ready(function() {
 //     $('select').material_select();

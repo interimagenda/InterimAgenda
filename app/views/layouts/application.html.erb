@@ -9,15 +9,9 @@
 </head>
 <body class="grey lighten-2">
 
-<!-- renders the navigation -->
+<%= render "layouts/navigation" %>
 
-<nav class="white big-nav" role="navigation">
-  <div class="nav-wrapper container">
-    <%= render "layouts/header" %>
-  </div>
-</nav>
-
-<!-- renders the main content of the page -->
+<%= render "layouts/header" %>
 
 <main class="container">
   <div class="center">
@@ -25,11 +19,7 @@
   </div>
 </main>
 
-<!-- renders the footer of the page -->
-
-<footer class="page-footer white footer-border">
-      <%= render "layouts/footer" %>
-</footer>
+<%= render "layouts/footer" %>
 
 </body>
 </html>
