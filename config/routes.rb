@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :employers
   resources :freelancers
   resources :jobs
+  resources :favorites, only: [:create, :destroy]
 
   root 'landing#index'
 
