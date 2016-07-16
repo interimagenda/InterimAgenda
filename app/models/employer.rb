@@ -1,6 +1,5 @@
 class Employer < User
   has_many :jobs, dependent: :destroy
-  has_many :favorites
   has_many :freelancers, through: :favorites, dependent: :destroy
   validates_presence_of :company_name, :location, on: :update
 
