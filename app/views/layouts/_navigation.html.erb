@@ -30,7 +30,8 @@
           <% end %></li>
           <li><%= link_to new_user_registration_path do %>
             <i class="fa fa-user text-center" aria-hidden="true"><br>sign-up</i>
-          <% end %></li>
+          <% end %>
+          </li>
         <% end %>
 
         <!-- freelancer logged in -->
@@ -40,12 +41,16 @@
           <% end %></li>
           <li><%= link_to jobs_path do %>
             <i class="fa fa-briefcase text-center" aria-hidden="true"><br>jobs</i>
-          <% end %></li>
+          <% end %>
+          </li>
         <% end %>
 
           <!-- employer logged in -->
         <% if user_signed_in? && current_user.type === 'Employer'%>
-          <li><%= link_to "freelancers", freelancers_path%></li>
+          <li><%= link_to freelancers_path do %>
+            <i class="fa fa-building-o text-center" aria-hidden="true"><br>freelancers</i>
+            <% end %>
+          </li>
         <% end %>
 
         <% if user_signed_in? %>
