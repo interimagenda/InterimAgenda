@@ -1,20 +1,18 @@
 <div class="row">
-  <div class="col s12">
+  <div class="col-sm-6 col-sm-offset-3">
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+    <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
   </div>
 </div>
 
 <div class="row">
-  <div class="col s12">
+  <div class="form-group col-sm-6 col-sm-offset-3">
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
 
-
-
-      <div class="basic_info_form hidden_info_form" style="display: none">
+      <div style="display: none">
         <%= render partial: 'basic_info', locals: {f: f} %>
       </div>
 
@@ -22,7 +20,7 @@
 
       <% if user_signed_in? && current_user.type === 'Freelancer'%>
 
-        <div class="freelancer_form">
+        <div>
           <%= render partial: 'freelancer', locals: {f: f} %>
         </div>
 
@@ -30,13 +28,13 @@
 
       <% elsif user_signed_in? && current_user.type === 'Employer'%>
 
-        <div class="employer_form">
+        <div>
           <%= render partial: 'employer', locals: {f: f} %>
         </div>
 
       <% end %>
 
-      <div class="business_info_form">
+      <div>
         <%= render partial: 'business_info', locals: {f: f} %>
       </div>
 
@@ -45,25 +43,31 @@
         <%= f.password_field :current_password, autocomplete: "off" %>
       </div>
 
-      <button type="button" id="toggle-basic-info" class="toggle-basic-info">
+      <p><button type="button" id="toggle-basic-info" class="toggle-basic-info btn btn-primary">
         toggle info
-      </button>
+      </button></p>
 
       <div class="actions">
-        <%= f.submit "Update" %>
+        <p><%= f.submit "Update", class: "btn btn-primary" %></p>
       </div>
     <% end %>
   </div>
 </div>
 
 <div class="row">
-  <div class="col s12">
+  <div class="col-sm-6 col-sm-offset-3">
 
 <h3>Cancel my account</h3>
 
   </div>
 </div>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<div class="row">
+  <div class="form-group col-sm-6 col-sm-offset-3">
 
-<%= link_to "Back", :back %>
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
+
+<%= link_to "Back", :back, class: "btn btn-primary" %>
+
+  </div>
+</div>

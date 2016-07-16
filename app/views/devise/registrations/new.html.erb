@@ -1,29 +1,31 @@
 <div class="row">
-  <div class="col s12">
+  <div class="col-sm-12">
     <h2>Sign up</h2>
   </div>
 </div>
 
 <div class="row">
-  <div class="col s12">
+  <div class="col-sm-12">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
 
       <!-- name info -->
 
-      <div class="basic_info_form"><%= render partial: 'basic_info', locals: {f: f} %></div>
+      <div>
+        <%= render partial: 'basic_info', locals: {f: f} %>
+      </div>
 
       <!-- select the type of user -->
 
-      <div class="field browser-default">
-        <%= f.label :type, class: "browser-default" %><br />
-        <%= f.select :type, options_for_select(%w[Freelancer Employer]), id: 'select_type', class: "browser-default" %>
+      <div class="field form-group">
+        <%= f.label :type %><br />
+        <%= f.select :type, options_for_select(%w[Freelancer Employer]), {}, class: "form-control" %>
       </div><br />
 
       <!-- render either employer or freelancer partial -->
 
       <div class="actions">
-        <%= f.submit "Sign up" %>
+        <%= f.submit "Sign up", class: "form-control" %>
       </div>
 
     <% end %>
@@ -31,7 +33,7 @@
 </div>
 
 <div class="row">
-  <div class="col s12">
+  <div class="col-sm-12">
     <%= render "devise/shared/links" %>
   </div>
 </div>
