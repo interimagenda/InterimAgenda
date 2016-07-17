@@ -17,8 +17,112 @@
 @import 'alerts';
 @import 'chosen';
 
-footer {
-  background-color: black;
-  color: #fff;
+// SCSS variables
+
+$font-stack:  Helvectica, sans-serif;
+$primary-color: #212121;
+$secondary-color: #f44336;
+$tertiary-color: #e57373;
+$white-color: #ffffff;
+$light-color: #eeeeee;
+$square-corners: 2px;
+
+$font-size-regular: 10px;
+$font-size-h1: 14px;
+$font-size-h2: 13px;
+$font-size-h3: 12px;
+$font-size-h4: 11px;
+
+// BODY
+
+.login-box {
+  background-color: $white-color;
+	border-radius: $square-corners;
+	text-align: center;
+  height: 100px;
   margin-top: 10px;
+
+}
+
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+  font-size: $font-size-regular;
+  background-color: $light-color;
+
+  h1 {
+    font-size: $font-size-h1;
+  }
+  h2 {
+    font-size: $font-size-h2;
+  }
+  h3 {
+    font-size: $font-size-h3;
+  }
+  h4 {
+    font-size: $font-size-h4;
+  }
+  a:link {
+      color: $secondary-color !important;
+  }
+  a:visited {
+      color: $secondary-color !important;
+  }
+  a:hover {
+      color: $tertiary-color !important;
+      text-decoration: none;
+  }
+  a:active {
+      color: $secondary-color !important;
+  }
+}
+
+// FOOTER
+
+footer {
+  background-color: $primary-color;
+  color: $light-color;
+  margin-top: 10px;
+  a:link, a:visited {
+      color: $secondary-color;
+  }
+  a:hover {
+      color: $light-color;
+      text-decoration: none;
+  }
+  ul {
+    padding: none !important;
+    list-style-type: none;
+    padding-left: 1px;
+  }
+}
+
+// NAVIGATION
+
+nav {
+
+  a:link {
+      color: $primary-color !important;
+  }
+  a:visited {
+      color: $primary-color !important;
+  }
+  a:hover {
+      color: $secondary-color !important;
+  }
+  a:active {
+      color: $secondary-color !important;
+  }
+  button, button:active, button:visited {
+    border-radius: $square-corners !important;
+  }
+  button:hover {
+    background-color: $light-color !important;
+  }
+  .icon-bar {
+    background-color: $primary-color !important;
+  }
+  .icon-bar:hover {
+    background-color: $secondary-color !important;
+  }
 }
