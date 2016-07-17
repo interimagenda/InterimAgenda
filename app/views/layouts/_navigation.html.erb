@@ -4,7 +4,7 @@
       <ul class="nav nav-pills">
 
         <!-- freelancer logged in -->
-        <% if user_signed_in? && current_user.type === 'Freelancer'%>
+        <% if current_user.type === 'Freelancer'%>
           <li><%= link_to employers_path do %>
             <i class="fa fa-building-o text-center" aria-hidden="true"><br>employers</i>
           <% end %></li>
@@ -15,7 +15,7 @@
         <% end %>
 
           <!-- employer logged in -->
-        <% if user_signed_in? && current_user.type === 'Employer'%>
+        <% if current_user.type === 'Employer'%>
           <li><%= link_to freelancers_path do %>
             <i class="fa fa-building-o text-center" aria-hidden="true"><br>freelancers</i>
             <% end %>

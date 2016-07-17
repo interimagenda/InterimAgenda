@@ -12,15 +12,20 @@
 
 <%= render "layouts/account" %>
 
+<% if user_signed_in? %>
 <%= render "layouts/navigation" %>
+<% end %>
+
+
+
 
 <header class="container">
 <%= render "layouts/header" %>
 </header>
 
-<main class="container">
+<% if user_signed_in? %> <main class="container"> <% end %>
   <%= yield %>
-</main>
+<% if user_signed_in? %> </main> <% end %>
 
 <footer class="container-fluid">
 <%= render "layouts/footer" %>

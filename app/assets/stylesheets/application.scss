@@ -16,16 +16,19 @@
 @import 'bootstrap/theme';
 @import 'alerts';
 @import 'chosen';
-
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 // SCSS variables
 
-$font-stack:  Helvectica, sans-serif;
+$font-stack: 'Roboto', sans-serif;
+
 $primary-color: #212121;
 $secondary-color: #f44336;
 $tertiary-color: #757575;
 $white-color: #ffffff;
 $light-color: #eeeeee;
+$medium-color: #e0e0e0;
 $square-corners: 1px;
+$font-weight-light: 300;
 
 $font-size-regular: 10px;
 $font-size-h1: 14px;
@@ -36,20 +39,37 @@ $font-size-icons: 8px;
 
 // BODY
 
+.background-jumbotron {
+  background-image: url(test.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 200px;
+}
+
 .login-box {
-  background-color: $white-color;
+  background-color: rgba(255,255,255, 0.95);
 	border-radius: $square-corners;
 	text-align: center;
-  height: 100px;
+  height: 50px;
   margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid $medium-color;
+
+  .login-box-form {
+    background-color: $white-color;
+  }
 
 }
 
 body {
-  font-family: $font-stack;
+  font-family: $font-stack !important;
   color: $primary-color;
   font-size: $font-size-regular;
-  background-color: $light-color;
+  background-color: $white-color;
+
+  p {
+    font-weight: $font-weight-light;
+  }
 
   h1 {
     font-size: $font-size-h1;
@@ -89,7 +109,7 @@ footer {
 
 nav {
   padding-top: 4px;
-  background-color: $white-color;
+  background-color: $light-color;
   font-size: $font-size-icons;
 
 
@@ -129,6 +149,7 @@ nav {
 // NAVIGATION FOR ACCOUNT SERVICES
 
 .account-bar {
+  height: 18px;
   i {
     margin-top: 5px;
     color: $primary-color;
