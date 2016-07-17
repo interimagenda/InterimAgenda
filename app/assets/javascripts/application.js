@@ -17,9 +17,6 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require navigation
 //= require messages
 //= require_tree .
-
-// $(document).ready(function() {
-//     $('select').material_select();
-// });
