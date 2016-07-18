@@ -23,7 +23,7 @@ $font-stack: 'Roboto', sans-serif;
 
 $primary-color: #212121;
 $secondary-color: #1e88e5;
-$tertiary-color: #757575;
+$tertiary-color: #424242;
 $white-color: #ffffff;
 $light-color: #eeeeee;
 $medium-color: #e0e0e0;
@@ -129,12 +129,23 @@ body {
       .landing-container {
         background-color: rgba(255,255,255, 0.6);
       }
+
+      .btn-secondary {
+        color: $white-color;
+        border-radius: $square-corners;
+        background-color: #424242;
+      }
+      .btn-secondary:active, .btn-secondary:hover {
+        background-color: $secondary-color;
+        color: $white-color;
+      }
+
 }
 
 // FOOTER
 
 footer {
-  background-color: $primary-color;
+  background-color: $tertiary-color;
   color: $light-color;
   margin-top: 10px;
   a:link, a:visited {
@@ -155,15 +166,12 @@ footer {
 
 nav {
   font-family: $font-stack !important;
-  padding-top: 4px;
-  background-color: $light-color;
   font-size: $font-size-icons;
   background-size: cover;
   background-repeat: no-repeat;
 
 
   a:link {
-    padding-top: 10px;
     width: 110px;
     border-radius: $square-corners;
     border: 2px solid $tertiary-color !important;
