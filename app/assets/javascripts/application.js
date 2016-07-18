@@ -20,3 +20,4 @@
 //= require navigation
 //= require messages
 //= require_tree .
+//= require form
