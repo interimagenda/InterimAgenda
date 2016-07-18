@@ -6,10 +6,10 @@
         <!-- freelancer logged in -->
         <% if current_user.type === 'Freelancer'%>
           <li><%= link_to employers_path do %>
-            <i class="fa fa-building-o text-center" aria-hidden="true"><br>employers</i>
+            <p><i class="fa fa-building-o text-center" aria-hidden="true"></i><br> employers</p>
           <% end %></li>
           <li><%= link_to jobs_path do %>
-            <i class="fa fa-briefcase text-center" aria-hidden="true"><br>jobs</i>
+            <p><i class="fa fa-briefcase text-center" aria-hidden="true"></i><br>jobs</p>
           <% end %>
           </li>
         <% end %>
@@ -17,7 +17,7 @@
           <!-- employer logged in -->
         <% if current_user.type === 'Employer'%>
           <li><%= link_to freelancers_path do %>
-            <i class="fa fa-building-o text-center" aria-hidden="true"><br>freelancers</i>
+            <p><i class="fa fa-building-o text-center" aria-hidden="true"></i><br>freelancers</p>
             <% end %>
           </li>
         <% end %>

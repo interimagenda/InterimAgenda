@@ -22,7 +22,7 @@
 $font-stack: 'Roboto', sans-serif;
 
 $primary-color: #212121;
-$secondary-color: #f44336;
+$secondary-color: #1e88e5;
 $tertiary-color: #757575;
 $white-color: #ffffff;
 $light-color: #eeeeee;
@@ -31,35 +31,58 @@ $square-corners: 1px;
 $font-weight-light: 300;
 
 $font-size-regular: 10px;
-$font-size-h1: 14px;
-$font-size-h2: 13px;
-$font-size-h3: 12px;
-$font-size-h4: 11px;
+$font-size-h1: 13px;
+$font-size-h2: 12px;
+$font-size-h3: 11px;
+$font-size-h4: 10px;
 $font-size-icons: 8px;
 
+$background-xs: url(background-xs.jpg);
+$background-sm: url(background-sm.jpg);
+$background-md: url(background-md.jpg);
+$background-lg: url(background-lg.jpg);
+
+// media queries and jumbotron
+
+@media screen and (min-width: 980px) {
+    .background-jumbotron {
+        background-image: $background-lg;
+        height: 440px;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+    .background-jumbotron {
+        background-image: $background-md;
+        height: 400px;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .background-jumbotron {
+      background-image: $background-sm;
+        height: 300px;
+        background-size: cover;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .background-jumbotron {
+        background-image: $background-xs;
+        background-repeat: no-repeat;
+        height: 160px;
+        background-size: cover;
+        margin-bottom: 5px;
+    }
+    .login-box h4 {
+        margin: 5px;
+    }
+}
+
 // BODY
-
-.background-jumbotron {
-  background-image: url(test.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-height: 200px;
-}
-
-.login-box {
-  background-color: rgba(255,255,255, 0.95);
-	border-radius: $square-corners;
-	text-align: center;
-  height: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 1px solid $medium-color;
-
-  .login-box-form {
-    background-color: $white-color;
-  }
-
-}
 
 body {
   font-family: $font-stack !important;
@@ -67,22 +90,45 @@ body {
   font-size: $font-size-regular;
   background-color: $white-color;
 
-  p {
-    font-weight: $font-weight-light;
-  }
+      p {
+        font-family: $font-stack !important;
+        font-weight: $font-weight-light;
+        font-size: $font-size-regular;
+      }
 
-  h1 {
-    font-size: $font-size-h1;
-  }
-  h2 {
-    font-size: $font-size-h2;
-  }
-  h3 {
-    font-size: $font-size-h3;
-  }
-  h4 {
-    font-size: $font-size-h4;
-  }
+      h1 {
+        font-size: $font-size-h1;
+      }
+      h2 {
+        font-size: $font-size-h2;
+      }
+      h3 {
+        font-size: $font-size-h3;
+      }
+      h4 {
+        font-size: $font-size-h4;
+      }
+      a {
+        color: $primary-color;
+      }
+      a:hover {
+        color: $secondary-color;
+      }
+
+      .login-box {
+        background-color: rgba(255,255,255, 0.7);
+        color: $tertiary-color;
+      	border-radius: $square-corners;
+      	text-align: center;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid $medium-color;
+      }
+
+      .landing-container {
+        background-color: rgba(255,255,255, 0.6);
+      }
 }
 
 // FOOTER
@@ -108,15 +154,17 @@ footer {
 // NAVIGATION
 
 nav {
+  font-family: $font-stack !important;
   padding-top: 4px;
   background-color: $light-color;
   font-size: $font-size-icons;
+  background-size: cover;
+  background-repeat: no-repeat;
 
 
   a:link {
-    padding: 2px;
-    margin-top: 7px;
-    width: 120px;
+    padding-top: 10px;
+    width: 110px;
     border-radius: $square-corners;
     border: 2px solid $tertiary-color !important;
     color: $primary-color !important;
