@@ -89,6 +89,7 @@ body {
   color: $primary-color;
   font-size: $font-size-regular;
   background-color: $white-color;
+  min-height: 100%;
 
       p {
         font-family: $font-stack !important;
@@ -148,6 +149,8 @@ footer {
   background-color: $tertiary-color;
   color: $light-color;
   margin-top: 10px;
+
+
   a:link, a:visited {
       color: $secondary-color;
   }
