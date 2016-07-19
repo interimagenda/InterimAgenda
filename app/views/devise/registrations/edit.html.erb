@@ -43,12 +43,12 @@
         <%= f.password_field :current_password, autocomplete: "off" %>
       </div>
 
-      <p><button type="button" id="toggle-basic-info" class="toggle-basic-info btn btn-primary">
+      <p><button type="button" id="toggle-basic-info" class="toggle-basic-info btn btn-secondary btn-secondary-altered">
         toggle info
       </button></p>
 
       <div class="actions">
-        <p><%= f.submit "Update", class: "btn btn-primary" %></p>
+        <p><%= f.submit "Update", class: "btn btn-secondary btn-secondary-altered" %></p>
       </div>
     <% end %>
   </div>
@@ -65,9 +65,9 @@
 <div class="row">
   <div class="col-sm-12">
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-secondary btn-secondary-altered" %></p>
 
-<%= link_to "Back", :back, class: "btn btn-primary" %>
+<%= link_to "Back", :back, class: "btn btn-secondary btn-secondary-altered" %>
 
   </div>
 </div>

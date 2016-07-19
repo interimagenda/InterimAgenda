@@ -1,31 +1,54 @@
-<div class="field">
+<div class="form-group form-group-sm">
+  <div class="col-sm-2">
   <%= f.label :birth_date %><br />
-  <%= f.date_field :birth_date, class: "form-control" %><br />
-  <span>Your age will not be visible</span>
+  </div>
+  <div class="col-sm-4">
+    <%= f.date_field :birth_date, class: "form-control" %><br />
+  </div>
 </div>
 
-<div class="field">
+<div class="form-group form-group-sm">
+  <div class="col-sm-2">
   <%= f.label :gender %><br />
-  <%= f.select :gender, options_for_select(%w[Male Female Undefined]), {}, id: 'gender', class: "form-control" %><br />
+  </div>
+  <div class="col-sm-4">
+    <%= f.select :gender, options_for_select(%w[Male Female Undefined]), {}, id: 'gender', class: "form-control" %><br />
+  </div>
 </div>
 
-<div class="field">
+<div class="form-group form-group-sm">
+  <div class="col-sm-2">
   <%= f.label :education %><br />
-  <%= f.select :education, options_for_select(%w[LBO MBO HBO Academic]), {}, id: 'education', class: "form-control" %><br />
+  </div>
+  <div class="col-sm-4">
+    <%= f.select :education, options_for_select(%w[LBO MBO HBO Academic]), {}, id: 'education', class: "form-control" %><br />
+  </div>
 </div>
 
-<div class="field">
-  <%= f.label :field %><br />
-  <%= f.text_field :field, class: "form-control" %><br />
+<div class="form-group form-group-sm">
+  <div class="col-sm-2">
+    <%= f.label :field %><br />
+  </div>
+  <div class="col-sm-4">
+    <%= f.text_field :field, class: "form-control" %><br />
+  </div>
 </div>
 
-<div class="field">
-  <%= f.label :availability %><br />
-  <%= f.select :availability, options_for_select(%w[Available Unavailable Soon]), {}, class: "form-control", id: 'availability' %><br />
+<div class="form-group form-group-sm">
+  <div class="col-sm-2">
+    <%= f.label :availability %><br />
+  </div>
+  <div class="col-sm-4">
+    <%= f.select :availability, options_for_select(%w[Available Unavailable Soon]), {}, class: "form-control", id: 'availability' %><br />
 
+  </div>
 </div>
 
-<div class="field">
-  <%= f.label :pay_rate %><br />
-  <%= f.number_field :pay_rate, class: "form-control", min: 20 %><br />
+<div class="form-group form-group-sm">
+  <div class="col-sm-2">
+    <%= f.label :pay_rate %><br />
+  </div>
+  <div class="col-sm-4">
+    <%= f.number_field :pay_rate, class: "form-control", min: 20 %><br />
+  </div>
 </div>

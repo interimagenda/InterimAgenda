@@ -1,10 +1,18 @@
-<div class="field">
-  <%= f.label :business %><br />
-  <%= f.select :business, options_for_select(%w[Banking Insurance Engineering IT Finance Legal Marketing Sales Communication
-      HR Healthcare Administration Government Construction Industry]), {}, class: "form-control" %><br />
+<div class="form-group form-group-sm">
+  <div class="col-sm-2">
+    <%= f.label :business %><br />
+  </div>
+  <div class="col-sm-4">
+    <%= f.select :business, options_for_select(%w[Banking Insurance Engineering IT Finance Legal Marketing Sales Communication
+        HR Healthcare Administration Government Construction Industry]), {}, class: "form-control" %><br />
+  </div>
 </div>
 
-<div class="field">
+<div class="form-group form-group-sm">
+  <div class="col-sm-2">
   <%= f.label :description %><br />
-  <%= f.text_area :description, cols: 40, rows: 15, class: "form-control" %><br />
+  </div>
+  <div class="col-sm-4">
+    <%= f.text_area :description, cols: 40, rows: 15, class: "form-control" %><br />
+  </div>
 </div>
