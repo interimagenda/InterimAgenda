@@ -8,21 +8,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="grey lighten-2">
+<body>
 
-<%= render "layouts/account" %>
+<%= render "layouts/navigation" %>
 
 <%= render "layouts/header" %>
 
-<% if user_signed_in? %>
-<%= render "layouts/navigation" %>
-<% end %>
+<%= render "layouts/flashes" %>
 
-
-
-
- <main class="container">
-  <%= yield %>
+<main class="container">
+<%= yield %>
 </main>
 
 <%= render "layouts/footer" %>
