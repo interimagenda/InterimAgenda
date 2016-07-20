@@ -20,24 +20,23 @@
 <div class="row">
   <div class="col-sm-12">
     <table class="table table-hover table-responsive">
+      <thead>
+        <tr>
+          <th>job title</th>
+          <th>date created</th>
+        </tr>
+      </thead>
 
-      <!-- table header -->
-
-      <tr>
-        <th>job title</th>
-        <th>date created</th>
-      </tr>
-
-      <!-- loop for creating overview of employers -->
-
+      <tbody>
       <% @jobs.each do |job| %>
         <tr>
           <td><%= link_to job.title, job_path(job.id) %></td>
           <td><%= job.created_at %></td>
         </tr>
       <% end %>
-
+      </tbody>
     </table>
+    <%= will_paginate %>
   </div>
 </div>
 

@@ -17,28 +17,29 @@
 
 <div class="row">
   <div class="col-sm-12">
-    <table class="table table-hover table-responsive">
 
       <!-- table header -->
+      <table class="table table-hover table-responsive">
+        <thead>
+          <tr>
+            <th>employer</th>
+            <th>location</th>
+            <th>business</th>
+            <th>field</th>
+          </tr>
+        </thead>
 
-      <tr>
-        <th>employer</th>
-        <th>location</th>
-        <th>business</th>
-        <th>field</th>
-      </tr>
-
-      <!-- loop for creating overview of employers -->
-
-      <% @employers.each do |employer| %>
-        <tr>
-          <td><%= link_to employer.company_name, employer_path(employer.id) %></td>
-          <td><%= employer.location %></td>
-          <td><%= employer.business %></td>
-          <td><%= employer.field %></td>
-        </tr>
-      <% end %>
-
+        <tbody>
+        <% @employers.each do |employer| %>
+          <tr>
+            <td><%= link_to employer.company_name, employer_path(employer.id) %></td>
+            <td><%= employer.location %></td>
+            <td><%= employer.business %></td>
+            <td><%= employer.field %></td>
+          </tr>
+        <% end %>
+      </tbody>
     </table>
+    <%= will_paginate %>
   </div>
 </div>

@@ -4,13 +4,9 @@
   </div>
 </div>
 
-<!-- searchform gets rendered here -->
-
 <div class="row">
     <div class="col-lg-12">
-
     <%= render 'search' %>
-
   </div>
 </div>
 
@@ -20,17 +16,15 @@
   <div class="col-lg-12">
       <table class="table">
 
-        <!-- table header -->
-
-        <tr>
-          <th>name of freelancer</th>
-          <th>business</th>
-          <th>field</th>
-          <th>availability</th>
-        </tr>
-
-        <!-- loop for creating overview of employers -->
-
+        <thead>
+          <tr>
+            <th>name of freelancer</th>
+            <th>business</th>
+            <th>field</th>
+            <th>availability</th>
+          </tr>
+        </thead>
+        <tbody>
         <% @freelancers.each do |freelancer| %>
           <tr>
             <td><%= link_to freelancer.first_name, freelancer_path(freelancer.id) %></td>
@@ -39,7 +33,9 @@
             <td><%= freelancer.availability %></td>
           </tr>
         <% end %>
-
-      </table>
+        </tbody>
+        
+    </table>
+    <%= will_paginate %>
   </div>
 </div>
