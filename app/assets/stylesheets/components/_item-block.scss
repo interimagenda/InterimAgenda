@@ -72,7 +72,7 @@
 
     .time,
     time,
-    .open-position {
+    .open-position, .location {
       display: inline-block;
       float: right;
       color: $color-subtitle;
@@ -82,7 +82,7 @@
       text-align: right;
     }
 
-    .open-position {
+    .open-position, .location {
       font-size: 13px;
       font-style: italic;
     }
@@ -278,7 +278,7 @@
 
   .item-block header .time,
   .item-block header time,
-  .item-block header .open-position {
+  .item-block header .open-position, .location {
     line-height: 56px;
   }
 
@@ -314,7 +314,7 @@
     .header-meta,
     .time,
     time,
-    .open-position {
+    .open-position, .location {
       display: block;
       float: none;
       text-align: center;
@@ -353,7 +353,7 @@
     .status {
       margin-bottom: 15px;
     }
-    
+
   }
 
 
