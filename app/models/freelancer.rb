@@ -1,4 +1,11 @@
 class Freelancer < User
+  scope :availability, -> (availability) { where availability: availability }
+  scope :business, -> (business) { where business: business }
+  scope :field, -> (field) { where field: field }
+  scope :education, -> (education) { where education: education }
+
+  include Filterable
+
   validates_presence_of :gender, :education, :field, :availability, :pay_rate, on: :update
   validates :availability, inclusion: { in: %w(Available Unavailable Soon),
     message: "%{value} is not a valid availability type"}, on: :update

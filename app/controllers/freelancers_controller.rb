@@ -7,7 +7,7 @@ class FreelancersController < ApplicationController
     else
       @freelancers = Freelancer.all.order('created_at DESC')
     end
-    @freelancers = Freelancer.paginate(page: params[:page], per_page: 5)
+    @freelancers = Freelancer.filter(params.slice(:availability, :business, :field, :education)).paginate(page: params[:page], per_page: 25)
   end
 
   def show

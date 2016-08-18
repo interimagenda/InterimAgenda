@@ -12,6 +12,9 @@
 
 <hr>
 
+<%= link_to "Available", freelancers_path(availability: "Available"), class:"btn btn-default" %>
+<%= link_to "Just my business", freelancers_path(business: current_user.business ), class:"btn btn-default" %>
+
 <div class="row">
   <div class="col-lg-12">
       <table class="table">
@@ -34,7 +37,7 @@
           </tr>
         <% end %>
         </tbody>
-        
+
     </table>
     <%= will_paginate %>
   </div>
