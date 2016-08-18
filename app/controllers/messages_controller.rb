@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+
   before_action :authenticate_user!
 
   def new
@@ -11,4 +12,5 @@ class MessagesController < ApplicationController
     flash[:success] = "Message has been sent!"
     redirect_to conversation_path(conversation)
   end
+  
 end

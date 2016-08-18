@@ -1,44 +1,15 @@
-<div class="row">
-  <div class="col-lg-12">
-    <h2>Freelancers</h2>
-  </div>
-</div>
+<h2>Freelancers</h2>
 
-<div class="row">
-    <div class="col-lg-12">
-    <%= render 'search' %>
-  </div>
-</div>
-
-<hr>
+<%= render 'search' %>
 
 <%= link_to "Available", freelancers_path(availability: "Available"), class:"btn btn-default" %>
 <%= link_to "Just my business", freelancers_path(business: current_user.business ), class:"btn btn-default" %>
 
-<div class="row">
-  <div class="col-lg-12">
-      <table class="table">
+<% @freelancers.each do |freelancer| %>
+        <p><%= link_to freelancer.first_name, freelancer_path(freelancer.id) %></p>
+        <p><%= freelancer.business %></p>
+        <p><%= freelancer.field %></p>
+        <p><%= freelancer.availability %></p>
+<% end %>
 
-        <thead>
-          <tr>
-            <th>name of freelancer</th>
-            <th>business</th>
-            <th>field</th>
-            <th>availability</th>
-          </tr>
-        </thead>
-        <tbody>
-        <% @freelancers.each do |freelancer| %>
-          <tr>
-            <td><%= link_to freelancer.first_name, freelancer_path(freelancer.id) %></td>
-            <td><%= freelancer.business %></td>
-            <td><%= freelancer.field %></td>
-            <td><%= freelancer.availability %></td>
-          </tr>
-        <% end %>
-        </tbody>
-
-    </table>
-    <%= will_paginate %>
-  </div>
-</div>
+<%= will_paginate %>

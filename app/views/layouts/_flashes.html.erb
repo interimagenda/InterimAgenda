@@ -1,7 +1,9 @@
-<% flash.each do |key, value| %>
-<div class="row">
-  <div class="col-xs-12 alert alert-<%= key %>">
-    <%= value %>
+<div class="flash-messages">
+  <% flash.each do |key, value| %>
+  <div class="row">
+    <div class="col-xs-12 alert alert-<%= key %>">
+      <%= value %>
+    </div>
   </div>
+  <% end %>
 </div>
-<% end %>

@@ -1,4 +1,5 @@
 class ConversationsController < ApplicationController
+
   before_action :authenticate_user!
   before_action :get_mailbox
   before_action :get_conversation, except: [:index, :empty_trash]
@@ -67,4 +68,5 @@ class ConversationsController < ApplicationController
     end
     @box = params[:box]
   end
+  
 end

@@ -1,48 +1,21 @@
-<div class="form-group form-group-sm">
-  <div class="col-sm-2">
-  <%= f.label :first_name %>
-  </div>
-  <div class="col-sm-4">
-    <%= f.text_field :first_name, class: "form-control" %>
-  </div>
-</div>
+<%= f.label :first_name %>
 
-<div class="form-group form-group-sm">
-  <div class="col-sm-2">
-  <%= f.label :last_name %><br />
-  </div>
-  <div class="col-sm-4">
-    <%= f.text_field :last_name, class: "devise-field form-control" %>
-  </div>
-</div>
+<%= f.text_field :first_name, class: "form-control" %>
 
-<div class="form-group form-group-sm">
-  <div class="col-sm-2">
-  <%= f.label :email %><br />
-  </div>
-  <div class="col-sm-4">
-    <%= f.email_field :email, class: "devise-field form-control" %>
-  </div>
-</div>
+<%= f.label :last_name %><br />
+<%= f.text_field :last_name, class: "devise-field form-control" %>
+
+<%= f.label :email %><br />
+
+<%= f.email_field :email, class: "devise-field form-control" %>
 
 <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
   <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
 <% end %>
 
-<div class="form-group form-group-sm">
-  <div class="col-sm-2">
-    <%= f.label :password %><br />
-  </div>
-  <div class="col-sm-4">
-    <%= f.password_field :password, autocomplete: "off", class: "devise-field form-control" %>
-  </div>
-</div>
+<%= f.label :password %><br />
+<%= f.password_field :password, autocomplete: "off", class: "devise-field form-control" %>
 
-<div class="form-group form-group-sm">
-  <div class="col-sm-2">
-    <%= f.label :password_confirmation %><br />
-  </div>
-  <div class="col-sm-4">
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: "devise-field form-control" %>
-  </div>
-</div>
+<%= f.label :password_confirmation %><br />
+
+<%= f.password_field :password_confirmation, autocomplete: "off", class: "devise-field form-control" %>

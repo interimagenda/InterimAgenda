@@ -1,4 +1,5 @@
 class FreelancersController < ApplicationController
+
   before_action :authenticate_user!
 
   def index
@@ -32,7 +33,5 @@ class FreelancersController < ApplicationController
     @freelancer.destroy
     redirect_to freelancers_path
   end
-
-  private
 
 end

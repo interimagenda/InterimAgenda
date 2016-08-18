@@ -31,4 +31,5 @@ class RegistrationsController < Devise::RegistrationsController
     :description
     )
   end
+  
 end

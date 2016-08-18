@@ -19,6 +19,6 @@ Rails.application.routes.draw do
   end
   resources :messages, only: [:new, :create]
 
-  root 'landing#index'
+  root 'jobs#index'
 
 end
